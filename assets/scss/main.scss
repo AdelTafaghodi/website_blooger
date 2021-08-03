@@ -1,20 +1,2 @@
-// @import url(./abstracts/_variables.scss);
-// @import url(./abstracts/_mixins.scss);
-@import url(./abstracts/_fonts.scss);
-// @import './abstracts/fonts';
-
-.adel1{
-    font-family: monospace;
-}
-
-.adel2{
-    font-family: 'abel';
-}
-
-.adel3{
-    font-family: 'anton';
-}
-
-.adel4{
-    font-family: anton;
-}
+@import '../scss/abstracts/fonts';
+@import '../scss/abstracts/variables';
