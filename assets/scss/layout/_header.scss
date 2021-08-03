@@ -1,0 +1,78 @@
+// abstracs-------------------------
+@import '../abstracts/fonts';
+@import '../abstracts/variables';
+// --------------------------------------
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex: {
+        wrap: nowrap;
+        direction: row;
+    }
+    overflow: hidden;
+    height: 10vh;
+    padding-top: 1rem;
+    background: map-get($colors ,'sky');
+    .header-brand{
+        padding: 0.5rem 1rem;
+        width: 10%;
+
+        a{  text-decoration: none;
+            color: map-get($colors , "text-grey" );
+            font: {
+                family: "lexend";
+                size: 2rem;}
+        
+        }
+    }
+
+    .header-navbar{
+        width: 100%;
+    }
+
+    .header-navbar__items{
+        display: flex;
+        flex: {
+            direction: row;
+            wrap: wrap;}
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+
+        .header-navbar__item{
+            padding: 0 .8rem;
+
+            a{
+                text-decoration: none;
+                color: map-get($colors , "text-grey" );
+                font: {
+                    family: "livvic";
+                    size: 1.3rem;}
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .search-bar{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 1%;
+        overflow: hidden;
+        padding-bottom: 1.5rem;
+
+        a{
+            margin-right: .5rem;}
+
+        input{
+            background: transparent;
+            border: none;
+            border-bottom: .1rem solid map-get($colors, "bg-color" );
+            outline: none;
+            color: black;
+            font-size: 1rem;
+            width: 60%;
+        }
+    }
+}

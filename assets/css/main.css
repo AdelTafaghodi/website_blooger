@@ -13,5 +13,82 @@
 @font-face {
   font-family: "lexend";
   src: url("../fonts/Lexend_Deca/LexendDeca-Regular.ttf"); }
+@font-face {
+  font-family: "abel";
+  src: url("../fonts/Abel/Abel-Regular.ttf"); }
+@font-face {
+  font-family: 'anton';
+  src: url("../fonts/Anton/Anton-Regular.ttf"); }
+@font-face {
+  font-family: "livvic";
+  src: url("../fonts/Livvic/Livvic-Regular.ttf"); }
+@font-face {
+  font-family: "josefin";
+  src: url("../fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf"); }
+@font-face {
+  font-family: "lexend";
+  src: url("../fonts/Lexend_Deca/LexendDeca-Regular.ttf"); }
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow: hidden;
+  height: 10vh;
+  padding-top: 1rem;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
+  header .header-brand {
+    padding: 0.5rem 1rem;
+    width: 10%; }
+    header .header-brand a {
+      text-decoration: none;
+      color: #3f4954;
+      font-family: "lexend";
+      font-size: 2rem; }
+  header .header-navbar {
+    width: 100%; }
+  header .header-navbar__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none; }
+    header .header-navbar__items .header-navbar__item {
+      padding: 0 .8rem; }
+      header .header-navbar__items .header-navbar__item a {
+        text-decoration: none;
+        color: #3f4954;
+        font-family: "livvic";
+        font-size: 1.3rem;
+        cursor: pointer; }
+  header .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1%;
+    overflow: hidden;
+    padding-bottom: 1.5rem; }
+    header .search-bar a {
+      margin-right: .5rem; }
+    header .search-bar input {
+      background: transparent;
+      border: none;
+      border-bottom: 0.1rem solid #0f0f0f;
+      outline: none;
+      color: black;
+      font-size: 1rem;
+      width: 60%; }
+
+html {
+  width: 100%; }
+
+body {
+  margin: 0;
+  width: 100%; }
+
+* {
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=main.css.map */
