@@ -1,11 +1,10 @@
-// abstracs-------------------------
+// ---------------abstracs-------------------------
 @import '../scss/abstracts/fonts';
 @import '../scss/abstracts/variables';
-// layers---------------------------
-@import "../scss/layout/header";
+@import '../scss/abstracts/mixins';
+// ---------------layers---------------------------
 
-
-// ------------------------------------
+// ------------------------------------------------
 html{
     width: 100%;
 }

@@ -1,0 +1,13 @@
+// ---------------------------abstracs-------------------------
+@import 'variables';
+// ------------------------------------------------------------
+@import "../layout/header";
+
+
+@media (max-width : 480px) {
+    @include header__mobile();
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    @include header__tablet();
+}

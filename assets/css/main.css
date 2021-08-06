@@ -13,31 +13,14 @@
 @font-face {
   font-family: "lexend";
   src: url("../fonts/Lexend_Deca/LexendDeca-Regular.ttf"); }
-@font-face {
-  font-family: "abel";
-  src: url("../fonts/Abel/Abel-Regular.ttf"); }
-@font-face {
-  font-family: 'anton';
-  src: url("../fonts/Anton/Anton-Regular.ttf"); }
-@font-face {
-  font-family: "livvic";
-  src: url("../fonts/Livvic/Livvic-Regular.ttf"); }
-@font-face {
-  font-family: "josefin";
-  src: url("../fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf"); }
-@font-face {
-  font-family: "lexend";
-  src: url("../fonts/Lexend_Deca/LexendDeca-Regular.ttf"); }
 header {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  height: 10vh;
-  padding-top: 1rem;
-  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 70px;
+  padding: .5rem;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  overflow: hidden; }
   header .header-brand {
     padding-left: .5rem; }
     header .header-brand a {
@@ -49,8 +32,7 @@ header {
     display: flex;
     list-style: none;
     margin: 0;
-    padding-top: .5rem;
-    padding-left: 0; }
+    padding: .5rem 0 0 0; }
     header .header-navbar__items .header-navbar__item {
       padding: 0 0.8rem; }
       header .header-navbar__items .header-navbar__item a {
@@ -59,20 +41,57 @@ header {
         font-family: "livvic";
         font-size: 1.3rem;
         cursor: pointer; }
-  header .search-bar {
-    display: flex;
-    justify-content: center; }
-    @media (max-width: 919px) {
-      header .search-bar {
-        padding: 0.5rem 0 0 8rem; } }
-    header .search-bar input {
+  header .header__search-bar {
+    padding-top: .5rem; }
+    header .header__search-bar input {
       background: transparent;
       border: none;
       outline: none;
       border-bottom: 0.1rem solid #0f0f0f;
+      padding: 0;
       font-size: 1rem;
       width: 60%; }
+  header .header__toggle-btn {
+    display: none;
+    width: 3rem;
+    height: 2rem;
+    background: #3f4954;
+    border-radius: 2rem;
+    padding: .22rem;
+    margin-right: 1em; }
+    header .header__toggle-btn .inner-circle {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1rem;
+      background: #ffffff; }
+  header .header__toggle-btn.active {
+    background: #4eb2f5; }
+    header .header__toggle-btn.active .inner-circle {
+      margin-left: 1rem; }
 
+@media (max-width: 480px) {
+  header {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    height: 60px;
+    transition: height 1s; }
+    header .header-navbar__items {
+      flex-direction: column; }
+      header .header-navbar__items .header-navbar__item {
+        padding-top: .5rem; }
+    header .header__search-bar {
+      justify-self: end;
+      width: 65%; }
+    header .header__toggle-btn {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 1rem; }
+
+  header.header-toggle {
+    height: 300px;
+    transition: height 1s; } }
 html {
   width: 100%; }
 
