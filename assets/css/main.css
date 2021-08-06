@@ -19,7 +19,6 @@ header {
   grid-template-columns: 1fr 2fr 1fr;
   height: 70px;
   padding: .5rem;
-  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   overflow: hidden; }
   header .header-brand {
     padding-left: .5rem; }
@@ -28,19 +27,24 @@ header {
       color: #3f4954;
       font-family: "lexend";
       font-size: 2rem; }
-  header .header-navbar__items {
+  header ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: .5rem 0 0 0; }
-    header .header-navbar__items .header-navbar__item {
-      padding: 0 0.8rem; }
-      header .header-navbar__items .header-navbar__item a {
+    header ul li {
+      padding: .5rem 1rem; }
+      header ul li a {
         text-decoration: none;
         color: #3f4954;
         font-family: "livvic";
         font-size: 1.3rem;
         cursor: pointer; }
+    header ul li:hover {
+      background: #3f4954;
+      transition: all .5s; }
+      header ul li:hover a {
+        color: #ffffff; }
   header .header__search-bar {
     padding-top: .5rem; }
     header .header__search-bar input {
@@ -76,10 +80,13 @@ header {
     justify-items: center;
     height: 60px;
     transition: height 1s; }
+    header.header-toggle {
+      height: 400px;
+      transition: height 1s; }
     header .header-navbar__items {
       flex-direction: column; }
       header .header-navbar__items .header-navbar__item {
-        padding-top: .5rem; }
+        padding-top: .8rem; }
     header .header__search-bar {
       justify-self: end;
       width: 65%; }
@@ -87,11 +94,7 @@ header {
       display: block;
       position: absolute;
       right: 0;
-      top: 1rem; }
-
-  header.header-toggle {
-    height: 300px;
-    transition: height 1s; } }
+      top: 1rem; } }
 html {
   width: 100%; }
 
