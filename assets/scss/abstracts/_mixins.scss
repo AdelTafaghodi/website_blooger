@@ -11,3 +11,11 @@
 @media (min-width: 481px) and (max-width: 768px) {
     @include header__tablet();
 }
+
+@media (min-width: 769px) and (max-width: 1024px){
+    @include header__tablet-lanscape();
+} 
+
+@media (min-width: 1025px) and (max-width: 1600px){
+    
+}

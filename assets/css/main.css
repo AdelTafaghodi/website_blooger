@@ -1,3 +1,13 @@
+html {
+  width: 100%; }
+
+body {
+  margin: 0;
+  width: 100%; }
+
+* {
+  box-sizing: border-box; }
+
 @font-face {
   font-family: "abel";
   src: url("../fonts/Abel/Abel-Regular.ttf"); }
@@ -16,10 +26,10 @@
 header {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: auto auto auto;
   height: 70px;
   padding: .5rem;
-  overflow: hidden; }
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
   header .header-brand {
     padding-left: .5rem; }
     header .header-brand a {
@@ -46,6 +56,7 @@ header {
       header ul li:hover a {
         color: #ffffff; }
   header .header__search-bar {
+    justify-self: center;
     padding-top: .5rem; }
     header .header__search-bar input {
       background: transparent;
@@ -75,6 +86,7 @@ header {
 
 @media (max-width: 480px) {
   header {
+    overflow: hidden;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
     justify-items: center;
@@ -95,14 +107,44 @@ header {
       position: absolute;
       right: 0;
       top: 1rem; } }
-html {
-  width: 100%; }
-
-body {
-  margin: 0;
-  width: 100%; }
-
-* {
-  box-sizing: border-box; }
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    overflow: hidden;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    height: 60px;
+    transition: height 1s; }
+    header.header-toggle {
+      height: 400px;
+      transition: height 1s; }
+    header .header-navbar__items {
+      flex-direction: column; }
+      header .header-navbar__items .header-navbar__item {
+        padding-top: .8rem; }
+    header .header__search-bar {
+      justify-self: end;
+      width: 65%; }
+    header .header__toggle-btn {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 1rem; } }
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto auto;
+    grid-template-areas: "brand brand" "list search"; }
+    header .header-brand {
+      grid-area: brand;
+      justify-self: center; }
+    header ul {
+      grid-area: list;
+      justify-self: start; }
+    header .header__search-bar {
+      grid-area: search;
+      justify-self: end;
+      margin-left: 3rem; } }
 
 /*# sourceMappingURL=main.css.map */

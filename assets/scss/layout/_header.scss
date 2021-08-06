@@ -5,12 +5,11 @@
 header{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: auto auto auto;
     height: 70px;
     padding: .5rem;
-    // background: map-get($colors ,'sky');
-    overflow: hidden;
-
+    background: map-get($colors ,'sky');
+    
     .header-brand{
         padding-left: .5rem;
         
@@ -53,6 +52,7 @@ header{
     }
     
     .header__search-bar{
+        justify-self: center;
         padding-top: .5rem;
         input{
             background: transparent;
@@ -92,9 +92,10 @@ header{
 }
 
 
-@mixin header__mobile() {
-
+@mixin responsive {
+    
     header{
+        overflow: hidden;
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
         justify-items: center;
@@ -127,10 +128,41 @@ header{
             top: 1rem;
         }
     }
-    
+}
+
+
+@mixin header__mobile() {
+    @include responsive();
 }
 
 
 @mixin header__tablet() {
-    
+    @include responsive();
+}
+
+@mixin header__tablet-lanscape(){
+    header{
+        height: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto auto;
+        grid-template-areas: "brand brand"
+                              "list search";
+
+        .header-brand{
+            grid-area: brand;
+            justify-self: center;
+        }
+
+        ul{
+            grid-area: list;
+            justify-self: start;
+        }
+
+        .header__search-bar{
+            grid-area: search;
+            justify-self: end;
+            margin-left: 3rem;
+        }
+    }
+
 }
