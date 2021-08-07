@@ -1,6 +1,8 @@
-// ---------------layers---------------------------
+@import '../scss/abstracts/fonts';
+@import '../scss/abstracts/variables';
 
 // ------------------------------------------------
+
 html{
     width: 100%;
 }
@@ -14,6 +16,4 @@ body{
     box-sizing: border-box;
 }
 // ---------------abstracs-------------------------
-@import '../scss/abstracts/fonts';
-@import '../scss/abstracts/variables';
 @import '../scss/abstracts/mixins';

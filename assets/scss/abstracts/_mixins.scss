@@ -2,14 +2,17 @@
 @import 'variables';
 // ------------------------------------------------------------
 @import "../layout/header";
+@import "../layout/main";
 
 
 @media (max-width : 480px) {
     @include header__mobile();
+    @include main__mobile();
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
     @include header__tablet();
+    @include main__tablet();
 }
 
 @media (min-width: 769px) and (max-width: 1024px){
@@ -17,5 +20,5 @@
 } 
 
 @media (min-width: 1025px) and (max-width: 1600px){
-    
+
 }

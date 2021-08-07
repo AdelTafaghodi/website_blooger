@@ -1,0 +1,71 @@
+@import '../abstracts/variables';
+
+main{
+    
+    nav{
+        background: {
+            image : url('../images/Background-image.png');
+            size: 100% auto;
+            repeat : no-repeat;
+            position: cover;
+        }
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        h3{
+            padding-top: 4rem;
+            font-family: "lexend";
+            color: map-get($colors,"white");
+            margin-top: 0;
+        }
+        h1{
+            color: map-get($colors,"white");
+            padding-bottom: 1rem;
+            font: {
+                family: "abel";
+                weight: bold;
+                size: 3rem;
+            }
+        }
+        button{
+            background: map-get($colors,"sky" );
+            padding: 1rem;
+            border-radius: 2rem;
+            border: none;
+            cursor: pointer;
+            width: 8rem;
+            
+            &:hover{
+                background: transparent;
+                transition: all 1s;
+                border: 3px solid map-get($colors,"sky");
+                
+                a{
+                    color: map-get($colors,"white" );
+                }
+            }
+
+            a{
+                color: map-get($colors,"text-grey");
+                text-decoration: none;
+                font: {
+                    family: "abel";
+                    size: 1rem;
+
+                }
+            }
+        }
+    }
+}
+
+@mixin main__mobile() {
+    main > nav{
+        display: none;
+    }
+}
+
+@mixin main__tablet() {
+    main > nav{
+        display: none;
+    }
+}
