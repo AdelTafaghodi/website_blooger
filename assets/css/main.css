@@ -86,7 +86,7 @@ header {
 
 main nav {
   background-image: url("../images/Background-image.png");
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: cover;
   text-align: center;
@@ -121,6 +121,38 @@ main nav {
       text-decoration: none;
       font-family: "abel";
       font-size: 1rem; }
+main .cards {
+  background: url(../images/Abract01.png) no-repeat 100%;
+  padding: 4rem 2rem 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+  main .cards .card {
+    position: relative;
+    background: transparent;
+    text-align: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    margin: 3rem 2rem;
+    transition: .8s; }
+    main .cards .card:hover {
+      transform: translateY(-1rem);
+      transition: transform 1s ease; }
+    main .cards .card img {
+      width: 100%;
+      height: auto; }
+    main .cards .card h3 {
+      color: #3f4954; }
+    main .cards .card button {
+      background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+      border: none;
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: 2rem; }
+      main .cards .card button a {
+        color: #3f4954;
+        font-family: "abel";
+        text-decoration: none; }
+    main .cards .card p {
+      font-size: .8rem; }
 
 @media (max-width: 480px) {
   header {
@@ -146,8 +178,19 @@ main nav {
       right: 0;
       top: 1rem; }
 
-  main > nav {
-    display: none; } }
+  main nav {
+    background: none;
+    height: auto; }
+    main nav h1 {
+      color: #3f4954;
+      font-size: 2rem; }
+    main nav h3 {
+      color: #3f4954; }
+    main nav button:hover {
+      background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
+  main .cards {
+    grid-template-columns: 1fr;
+    padding-top: 1rem; } }
 @media (min-width: 481px) and (max-width: 768px) {
   header {
     overflow: hidden;
@@ -172,8 +215,17 @@ main nav {
       right: 0;
       top: 1rem; }
 
-  main > nav {
-    display: none; } }
+  main nav {
+    background: none;
+    height: auto; }
+    main nav h1 {
+      color: #3f4954;
+      font-size: 2rem; }
+    main nav h3 {
+      color: #3f4954; }
+  main .cards {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1rem; } }
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
     height: auto;
