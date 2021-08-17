@@ -107,6 +107,44 @@ main{
         }
     }
 
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        padding: 3rem 5rem;
+        article{
+
+
+
+            .post{
+                position: relative;
+                img{
+                    
+                    transition: transform 1s;
+                    &:hover{
+                        transform: scale(1.05 , 1.05);
+
+                    }
+                }
+                .post-info{
+                    display: inline-block;
+                    border-radius: 2rem;
+                    padding: 1rem;
+                    text-align: center;
+                    background:map-get($colors, "sky" );
+                    position: absolute;
+                    top: 60%;
+                    left: 35%;
+                }
+            }
+        }
+
+
+        aside{
+
+        }
+    }
+
 }   
 
 @mixin main__mobile() {

@@ -153,6 +153,26 @@ main .cards {
         text-decoration: none; }
     main .cards .card p {
       font-size: .8rem; }
+main .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  padding: 3rem 5rem; }
+  main .content article .post {
+    position: relative; }
+    main .content article .post img {
+      transition: transform 1s; }
+      main .content article .post img:hover {
+        transform: scale(1.05, 1.05); }
+    main .content article .post .post-info {
+      display: inline-block;
+      border-radius: 2rem;
+      padding: 1rem;
+      text-align: center;
+      background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+      position: absolute;
+      top: 60%;
+      left: 35%; }
 
 @media (max-width: 480px) {
   header {
