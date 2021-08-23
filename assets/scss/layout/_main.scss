@@ -1,27 +1,26 @@
-@import '../abstracts/variables';
+@import "../abstracts/variables";
 
-main{
-
-    nav{
+main {
+    nav {
         background: {
-            image : url('../images/Background-image.png');
+            image: url("../images/Background-image.png");
             size: 100% 100%;
-            repeat : no-repeat;
+            repeat: no-repeat;
             position: cover;
         }
         text-align: center;
         width: 100%;
         height: 100vh;
 
-        h3{
+        h3 {
             padding-top: 4rem;
             font-family: "lexend";
-            color: map-get($colors,"white");
+            color: map-get($colors, "white");
             margin-top: 0;
         }
 
-        h1{
-            color: map-get($colors,"white");
+        h1 {
+            color: map-get($colors, "white");
             padding-bottom: 1rem;
             font: {
                 family: "abel";
@@ -30,146 +29,233 @@ main{
             }
         }
 
-        button{
-            background: map-get($colors,"sky" );
+        button {
+            background: map-get($colors, "sky");
             padding: 1rem;
             border-radius: 2rem;
             border: none;
             cursor: pointer;
             width: 8rem;
-            
-            &:hover{
+
+            &:hover {
                 background: transparent;
                 transition: all 1s;
-                border: 3px solid map-get($colors,"sky") ;
-                
-                a{
-                    color: map-get($colors,"white" );
+                border: 3px solid map-get($colors, "sky");
+
+                a {
+                    color: map-get($colors, "white");
                 }
             }
 
-            a{
-                color: map-get($colors,"text-grey");
+            a {
+                color: map-get($colors, "text-grey");
                 text-decoration: none;
                 font: {
                     family: "abel";
                     size: 1rem;
-
                 }
             }
         }
     }
 
-    .cards{
-        background: url(../images/Abract01.png) no-repeat 100% ;
+    .cards {
+        background: url(../images/Abract01.png) no-repeat 100%;
         padding: 4rem 2rem 0 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        .card{
+        .card {
             position: relative;
             background: transparent;
             text-align: center;
             box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
             margin: 3rem 2rem;
-            transition: .8s;
+            transition: 0.8s;
 
-            &:hover{
+            &:hover {
                 transform: translateY(-1rem);
                 transition: transform 1s ease;
             }
 
-            img{
+            img {
                 width: 100%;
                 height: auto;
             }
 
-            h3{
-                color: map-get($colors, "text-grey" );
+            h3 {
+                color: map-get($colors, "text-grey");
             }
 
-            button{
-                background: map-get($colors,"sky" );
+            button {
+                background: map-get($colors, "sky");
                 border: none;
                 cursor: pointer;
                 padding: 1rem;
                 border-radius: 2rem;
 
-                a{
-                    color: map-get($colors, "text-grey" );
+                a {
+                    color: map-get($colors, "text-grey");
                     font-family: "abel";
                     text-decoration: none;
                 }
             }
 
-            p{
-                font-size: .8rem;
+            p {
+                font-size: 0.8rem;
             }
         }
     }
 
-    .content{
+    .content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
         padding: 3rem 5rem;
-        article{
-
-
-
-            .post{
+        article {
+            .post {
                 position: relative;
-                img{
-                    
+                img {
                     transition: transform 1s;
-                    &:hover{
-                        transform: scale(1.05 , 1.05);
-
+                    &:hover {
+                        transform: scale(1.05, 1.05);
                     }
                 }
-                .post-info{
+                .post-info {
                     display: inline-block;
                     border-radius: 2rem;
                     padding: 1rem;
                     text-align: center;
-                    background:map-get($colors, "sky" );
+                    background: map-get($colors, "sky");
                     position: absolute;
-                    top: 60%;
+                    top: 58%;
                     left: 35%;
+                    font-size: 0.8rem;
+                }
+                .post-header {
+                    padding-top: 0.5rem;
+                    font-family: "anton";
+                    color: map-get($colors, "text-grey");
+                }
+                .post-text {
+                    font-family: "abel";
+                    font-size: 1.1rem;
+                    color: map-get($colors, "text-light");
+                }
+                button {
+                    background: map-get($colors, "sky");
+                    padding: 0.5rem 0.7rem;
+                    border: none;
+
+                    a {
+                        text-decoration: none;
+                        color: map-get($colors, "text-grey");
+                        img {
+                            padding-top: 0;
+                            margin-left: 0.7rem;
+                        }
+                    }
                 }
             }
         }
 
+        aside {
+            h1 {
+                color: map-get($colors, "text-grey");
+                font-size: 2rem;
+                font-family: "lexend";
+            }
+            .category {
+                div {
+                    button {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 70%;
+                        background: map-get($colors, "sky");
+                        border: none;
+                        margin: 1rem;
+                        border-radius: 2rem;
+                        padding: 0.5rem 0.8rem;
 
-        aside{
+                        a {
+                            text-decoration: none;
+                            color: map-get($colors, "text-grey");
+                            font-size: 1rem;
+                            font-family: "josefin";
+                        }
 
+                        span {
+                            font-family: "josefin";
+                            color: map-get($colors, "text-grey");
+                        }
+                    }
+                }
+            }
+
+            .popular-posts {
+                margin: 4rem 0;
+                .popular-post {
+                    margin: 0 0 5rem 1rem;
+                    & > img {
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                    .popular-post__info {
+                        width: 50%;
+                        padding: 0.8rem;
+                        font-size: 0.7rem;
+                        background: map-get($colors, "white");
+                        position: relative;
+                        bottom: 1.5rem;
+                    }
+
+                    h4 {
+                        margin-top: 0;
+                        font-family: "livvic";
+                    }
+                }
+            }
+
+            .newes-letter {
+                form{
+                    input{
+                        display: block;
+                        padding: .8rem;
+                    }
+                    button{
+                        margin-top: 1rem;
+                        background: map-get($colors, "sky");
+                        border: none;
+                        padding: .8rem;
+                        border-radius: 2rem;
+                        cursor: pointer;
+                    }
+                }                
+            }
         }
     }
-
-}   
+}
 
 @mixin main__mobile() {
     main {
-        nav{
+        nav {
             background: none;
             height: auto;
-            h1{
-                color: map-get($colors, "text-grey" );
+            h1 {
+                color: map-get($colors, "text-grey");
                 font-size: 2rem;
             }
-            h3{
-                color: map-get($colors, "text-grey" );
-    
+            h3 {
+                color: map-get($colors, "text-grey");
             }
 
-            button{
-                &:hover{
-                    background: map-get($colors,"sky" );
-                    
+            button {
+                &:hover {
+                    background: map-get($colors, "sky");
                 }
             }
         }
 
-        .cards{
+        .cards {
             grid-template-columns: 1fr;
             padding-top: 1rem;
         }
@@ -178,19 +264,19 @@ main{
 
 @mixin main__tablet() {
     main {
-        nav{
+        nav {
             background: none;
             height: auto;
-            h1{
-                color: map-get($colors, "text-grey" );
+            h1 {
+                color: map-get($colors, "text-grey");
                 font-size: 2rem;
             }
-            h3{
-                color: map-get($colors, "text-grey" );
+            h3 {
+                color: map-get($colors, "text-grey");
             }
         }
 
-        .cards{
+        .cards {
             grid-template-columns: 1fr 1fr;
             padding-top: 1rem;
         }
@@ -198,20 +284,17 @@ main{
 }
 
 @mixin main__tablet-lanscape() {
-    main{
-        nav{
-            background-size: 100% 100% ;
+    main {
+        nav {
+            background-size: 100% 100%;
             height: 100vh;
-            
         }
-        .cards{
+        .cards {
             grid-template-columns: 1fr 1fr;
             padding-top: 0;
-
         }
     }
 }
 
 @mixin main__desktop() {
-    
 }
