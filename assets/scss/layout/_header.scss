@@ -1,128 +1,125 @@
 // ---------------------------abstracs-------------------------
-@import '../abstracts/variables';
+@import "../abstracts/variables";
 //-------------------------------------------------------------
 
-header{
+header {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
     height: 70px;
-    padding: .5rem;
+    padding: 0.5rem;
     // background: map-get($colors ,'sky');
-    
-    .header-brand{
-        padding-left: .5rem;
-        
-        a{  text-decoration: none;
-            color: map-get($colors , "text-grey" );
+
+    .header-brand {
+        padding-left: 0.5rem;
+
+        a {
+            text-decoration: none;
+            color: map-get($colors, "text-grey");
             font: {
                 family: "lexend";
-                size: 2rem;}
+                size: 2rem;
+            }
         }
     }
 
-    ul{
+    ul {
         display: flex;
         list-style: none;
-        margin: 0 ;
-        padding: .5rem 0 0 0;
+        margin: 0;
+        padding: 0.5rem 0 0 0;
 
-        li{
-            padding: .5rem 1rem;
+        li {
+            padding: 0.5rem 1rem;
 
-            
-            a{
+            a {
                 text-decoration: none;
-                color: map-get($colors , "text-grey" );
+                color: map-get($colors, "text-grey");
                 font: {
                     family: "livvic";
-                    size: 1.3rem;}
-                    cursor: pointer;
-                    
-            }
-                
-        }
-        li:hover{
-                background: map-get($colors , 'text-grey' );
-                transition: background .5s;
-                border-radius: 1rem;
-                a{
-                    color: map-get($colors , "white" );
+                    size: 1.3rem;
                 }
+                cursor: pointer;
+            }
+        }
+        li:hover {
+            background: map-get($colors, "text-grey");
+            transition: background 0.5s;
+            border-radius: 1rem;
+            a {
+                color: map-get($colors, "white");
+            }
         }
     }
-    
-    .header__search-bar{
+
+    .header__search-bar {
         justify-self: center;
-        padding-top: .5rem;
-        input{
+        padding-top: 0.5rem;
+        input {
             background: transparent;
             border: none;
             outline: none;
-            border-bottom: .1rem solid map-get($colors, "bg-color" );
-            padding:  0;
+            border-bottom: 0.1rem solid map-get($colors, "bg-color");
+            padding: 0;
             font: {
                 size: 1rem;
             }
             width: 60%;
         }
     }
-    
-    .header__toggle-btn{
+
+    .header__toggle-btn {
         display: none;
         width: 3rem;
         height: 2rem;
-        background: map-get($colors , "text-grey" );
+        background: map-get($colors, "text-grey");
         border-radius: 2rem;
-        padding: .22rem;
+        padding: 0.22rem;
         margin-right: 1em;
-        .inner-circle{
+        .inner-circle {
             width: 1.5rem;
             height: 1.5rem;
             border-radius: 1rem;
-            background: map-get($colors , "white" );
+            background: map-get($colors, "white");
         }
     }
-    .header__toggle-btn.active{
+    .header__toggle-btn.active {
         background: rgb(78, 178, 245);
 
-        .inner-circle{
+        .inner-circle {
             margin-left: 1rem;
         }
     }
 }
 
-
 @mixin responsive {
-    
-    header{
+    header {
         overflow: hidden;
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
         justify-items: center;
         height: 60px;
-        transition: height 1s ;
+        transition: height 1s;
 
-        &.header-toggle{
+        &.header-toggle {
             height: 400px;
-            transition: height 1s ;
+            transition: height 1s;
         }
 
-        .header-navbar__items{
+        .header-navbar__items {
             flex-direction: column;
 
-            .header-navbar__item{
-                padding-top: .8rem;
+            .header-navbar__item {
+                padding-top: 0.8rem;
             }
-
         }
 
-        .header__search-bar{
+        .header__search-bar {
             justify-self: end;
             width: 65%;
         }
 
-        .header__toggle-btn{
+        .header__toggle-btn {
             display: block;
             position: absolute;
             right: 0;
@@ -131,39 +128,37 @@ header{
     }
 }
 
-
 @mixin header__mobile() {
     @include responsive();
 }
-
 
 @mixin header__tablet() {
     @include responsive();
 }
 
-@mixin header__tablet-lanscape(){
-    header{
+@mixin header__tablet-lanscape() {
+    header {
         height: auto;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: auto auto;
-        grid-template-areas: "brand brand"
-                              "list search";
+        grid-template-areas:
+            "brand brand"
+            "list search";
 
-        .header-brand{
+        .header-brand {
             grid-area: brand;
             justify-self: center;
         }
 
-        ul{
+        ul {
             grid-area: list;
             justify-self: start;
         }
 
-        .header__search-bar{
+        .header__search-bar {
             grid-area: search;
             justify-self: end;
             margin-left: 3rem;
         }
     }
-
 }
